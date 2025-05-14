@@ -113,7 +113,7 @@ this file is `000-default-le-ssl.conf`.
 
 ## Testing
 
-Xbs has been tested with the xBackupSync extension for Chrome.  You can test
+Xbs has been tested with the xBrowserSync extension for Chrome.  You can test
 it outside of a browser extension using the `curl` utility.  Run
 Xbs in one terminal session, as shown above, and in another terminal
 session, use the following commands to test the various API endpoints.
