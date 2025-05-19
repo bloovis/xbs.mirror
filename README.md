@@ -86,15 +86,16 @@ value is `./xbs.yml`.
 ## System Service
 
 It is more convenient to start the Xbs server as a system service than to run it
-from the command line.  To do this, follow these steps:
+from the command line.  To do this, copy the file `xbs.service.sample` to `/etc/systemd/system/xbs.service`
+and edit it as necessary.  The values most likely to need editing are `WorkingDirectory`
+and `ExecStart`.
 
-* Copy the file `xbs.service.sample` to `/etc/systemd/system/xbs.service`
-  and edit it as necessary.  The values most likely to need editing are `WorkingDirectory`
-  and `ExecStart`.
-* Run `systemctl daemon-reload` to tell systemd about the new Xbs service
-* Run `systemctl enable xbs` to enable the Xbs service
-* Run `systemctl start xbs` to start the Xbs service
-* Run `systemctl status xbs` to verify that the Xbs service is running
+Start the xbs service and check its status:
+
+    systemctl daemon-reload
+    systemctl enable xbs
+    systemctl start xbs
+    systemctl status xbs
 
 ## Apache Reverse Proxy
 
@@ -105,7 +106,7 @@ proxy, you must first enable the Apache2 proxy modules:
 
     a2enmod proxy_http
 
-Then add the following line to the VirtualHost section in the appropriate config file
+Then add the following line to the `<VirtualHost *:443>` section in the appropriate config file
 in `/etc/apache2/sites-enabled/`.  On my system, using Let's Encrypt,
 this file is `000-default-le-ssl.conf`.
 
