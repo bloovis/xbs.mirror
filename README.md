@@ -1,5 +1,8 @@
 # Xbs
 
+(*Note*: If you are reading this on Github, you can find the
+original Fossil repository [here](https://www.bloovis.com/fossil/home/marka/fossils/xbs/home)).
+
 Xbs is a server that implements the [xBrowserSync](https://www.xbrowsersync.org/)
 [API](https://api.xbrowsersync.org/).  I looked at the [official source code](https://github.com/xbrowsersync/api)
 for the API server, as well as a couple of alternatives written in Go,
